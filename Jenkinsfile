@@ -30,7 +30,7 @@ pipeline {
         stage("test") {
             when {
                 expression {
-                    params.executeTests
+                    params.executeTests && params.name='ALL'
                 }
             }
             steps {
@@ -48,3 +48,5 @@ pipeline {
         }
     }
 }
+
+
