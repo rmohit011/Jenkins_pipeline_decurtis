@@ -18,7 +18,7 @@ pipeline {
         stage("build") {
             when {
                 expression {
-                    params.name
+                    params.name=='ALL' || 'buid'
                 }
             }
             steps {
